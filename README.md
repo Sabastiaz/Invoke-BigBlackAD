@@ -27,17 +27,17 @@ This tool solves **all** of the above by **summoning Big Black** — the legenda
 
 **One-liner (IEX method):**
 ```powershell
-IEX (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/YOURUSERNAME/YOURREPO/main/Invoke-BigBlackAD.ps1')
+IEX (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/ChickenLoner/Invoke-BigBlackAD/main/Invoke-BigBlackAD.ps1')
 ```
 
 **Modern method:**
 ```powershell
-IEX (iwr 'https://raw.githubusercontent.com/YOURUSERNAME/YOURREPO/main/Invoke-BigBlackAD.ps1' -UseBasicParsing)
+IEX (iwr 'https://raw.githubusercontent.com/ChickenLoner/Invoke-BigBlackAD/main/Invoke-BigBlackAD.ps1' -UseBasicParsing)
 ```
 
 **Clone and import locally:**
 ```powershell
-git clone https://github.com/YOURUSERNAME/YOURREPO.git
+git clone https://github.com/ChickenLoner/Invoke-BigBlackAD.git
 Import-Module .\Invoke-BigBlackAD.ps1
 Invoke-BigBlackAD
 ```
@@ -104,7 +104,7 @@ When your team is lost in the forest of Group Policy Objects and you can't find 
 📬 **Contact Big Black directly:**
 👉 [https://www.facebook.com/sabastian.fhantomhive](https://www.facebook.com/sabastian.fhantomhive)
 
-Tell him: *"I need AD help. PowerView sent me."*
+Tell him: *"I need AD help. Chicken0248 sent me."*
 
 ---
 
