@@ -23,14 +23,9 @@ This tool solves **all** of the above by **summoning Big Black** — the legenda
 
 ---
 
-## ⚡ Quick Start (Just Like PowerView)
+## ⚡ Quick Start 
 
 **One-liner (IEX method):**
-```powershell
-IEX (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/ChickenLoner/Invoke-BigBlackAD/main/Invoke-BigBlackAD.ps1')
-```
-
-**Modern method:**
 ```powershell
 IEX (iwr 'https://raw.githubusercontent.com/ChickenLoner/Invoke-BigBlackAD/main/Invoke-BigBlackAD.ps1' -UseBasicParsing)
 ```
