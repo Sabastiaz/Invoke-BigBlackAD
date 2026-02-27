@@ -2,7 +2,7 @@
 
 > *"When your pentest hits a wall, there's only one man for the job."*
 
-![PowerShell](https://img.shields.io/badge/PowerShell-5.1%2B-blue?style=for-the-badge&logo=powershell)
+![PowerShell](https://img.shields.io/badge/PowerShell-3.0%2B-blue?style=for-the-badge&logo=powershell)
 ![Platform](https://img.shields.io/badge/Platform-Windows-lightgrey?style=for-the-badge&logo=windows)
 ![AD](https://img.shields.io/badge/Active%20Directory-Owned-red?style=for-the-badge)
 ![Summon](https://img.shields.io/badge/Big%20Black-Summoned-success?style=for-the-badge)
@@ -34,7 +34,8 @@ IEX (iwr 'https://raw.githubusercontent.com/Sabastiaz/Invoke-BigBlackAD/main/Inv
 ```powershell
 git clone https://github.com/Sabastiaz/Invoke-BigBlackAD.git
 Import-Module .\Invoke-BigBlackAD.ps1
-Invoke-BigBlackAD
+Invoke-BigBlackAD                      # basic enumeration
+Invoke-BigBlackAD -FullEnumeration     # full enumeration (shares, groups, ACLs, BloodHound, etc.)
 ```
 
 ---
@@ -50,7 +51,6 @@ Invoke-BigBlackAD
            |___/
                     >> A D  W H I S P E R E R <<
 [*] Initializing Advanced AD Enumeration Toolkit...
-[
 [*] Starting Big Black AD Enumeration...
 [*] Target Domain: wowza.local
 [*] Current User: Administrator
@@ -104,7 +104,7 @@ PDC                            dc01.wowza.local
 ✅ Export Zip
 
 🔹 3️⃣ AD Recycle Bin Inspector (Read-Only)
-✅ Get-DeletedADObjectReport
+✅ Restore-DeletedADObject
 
 🔹 4️⃣ Token & Privilege Analyzer (Full Host Context Module)
 ✅ whoami /priv
@@ -123,15 +123,16 @@ Low / Medium / High / System
 ✅ Summary Report Generator
 
 🔹 6️⃣ Modes
-Lab Mode
 
-เปิด optional tools
-BloodHound full collection
-Open Facebook (minimized 😄)
-Audit Mode (default)
-Conservative collection
-Lower noise
-DCOnly collection
+**Lab Mode** (`-Mode Lab`)
+- Loads optional tools (PowerView if present)
+- BloodHound full collection
+- Opens Facebook profile at completion
+
+**Audit Mode** (`-Mode Audit`, default)
+- Conservative collection
+- Lower noise
+- DCOnly BloodHound collection
 
 🔹 7️⃣ OPSEC Improvements
 
