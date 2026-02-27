@@ -27,12 +27,12 @@ This tool solves **all** of the above by **summoning Big Black** — the legenda
 
 **One-liner (IEX method):**
 ```powershell
-IEX (iwr 'https://raw.githubusercontent.com/ChickenLoner/Invoke-BigBlackAD/main/Invoke-BigBlackAD.ps1' -UseBasicParsing)
+IEX (iwr 'https://raw.githubusercontent.com/Sabastiaz/Invoke-BigBlackAD/main/Invoke-BigBlackAD.ps1' -UseBasicParsing)
 ```
 
 **Clone and import locally:**
 ```powershell
-git clone https://github.com/ChickenLoner/Invoke-BigBlackAD.git
+git clone https://github.com/Sabastiaz/Invoke-BigBlackAD.git
 Import-Module .\Invoke-BigBlackAD.ps1
 Invoke-BigBlackAD
 ```
@@ -42,29 +42,35 @@ Invoke-BigBlackAD
 ## 🖥️ Expected Output
 
 ```
-    ██████╗ ██╗ ██████╗     ██████╗ ██╗      █████╗  ██████╗██╗  ██╗
-    ██╔══██╗██║██╔════╝     ██╔══██╗██║     ██╔══██╗██╔════╝██║ ██╔╝
-    ██████╔╝██║██║  ███╗    ██████╔╝██║     ███████║██║     █████╔╝
-    ...
+    ____  _         ____  _            _
+ | __ )(_) __ _  | __ )| | __ _  ___| | __
+ |  _ \| |/ _' | |  _ \| |/ _' |/ __| |/ /
+ | |_) | | (_| | | |_) | | (_| | (__|   <
+ |____/|_|\__, | |____/|_|\__,_|\___|_|\_\
+           |___/
+                    >> A D  W H I S P E R E R <<
+[*] Initializing Advanced AD Enumeration Toolkit...
+[
+[*] Starting Big Black AD Enumeration...
+[*] Target Domain: wowza.local
+[*] Current User: Administrator
+[*] Checking Active Directory Module...
+[+] Active Directory Module loaded successfully
+[*] Enumerating Domain Information...
+[+] Domain: wowza.local
+[+] Forest: wowza.local
+[+] Domain Controllers: 1
 
-    [!] CRITICAL AD ISSUE DETECTED
-    [*] Standard enumeration tools have FAILED.
-    [*] BloodHound confused. SharpHound crying. PowerView shaking.
-    [*] There is only ONE solution...
+Name                           Value
+----                           -----
+DomainMode                     Unknown
+SchemaMaster
+ForestName                     wowza.local
+DomainControllers              dc01.wowza.local
+ForestMode                     Unknown
+DomainName                     wowza.local
+PDC                            dc01.wowza.local
 
-    [>>>] DEPLOYING BIG BLACK...
-    [>>>] Loading elite AD knowledge base...
-    [>>>] Bypassing all defenses with pure skill...
-
-╔══════════════════════════════════════════════════════════╗
-║   Big Black has been SUMMONED successfully!              ║
-║   Contact him NOW before the Domain Admin escapes:       ║
-║   >> https://www.facebook.com/sabastian.fhantomhive      ║
-║   Tell him: 'I need AD help. PowerView sent me.'         ║
-╚══════════════════════════════════════════════════════════╝
-
-[+] Facebook profile opened. Go ask Big Black for help!
-[+] He will have you owning that domain in no time. ;)
 ```
 
 ---
@@ -74,7 +80,7 @@ Invoke-BigBlackAD
 | Requirement | Version |
 |---|---|
 | PowerShell | 3.0+ |
-| OS | Windows |
+| OS | Only Windows |
 | Big Black | Available on Facebook |
 | Desperation | Maximum |
 
@@ -82,13 +88,52 @@ Invoke-BigBlackAD
 
 ## 🛠️ Features
 
-- ✅ Dramatic ASCII banner because professionalism
-- ✅ Fake "summoning sequence" with suspenseful delays
-- ✅ Roasts your other tools while deploying
-- ✅ Automatically opens Big Black's Facebook profile
-- ✅ Works exactly like PowerView imports (because we're professionals)
-- ✅ 100% success rate at summoning Big Black
-- ✅ 0% success rate at actual AD enumeration
+🔹 1️⃣ Core AD Enumeration
+✅ Domain Information
+✅ User Enumeration
+✅ AS-REP Roast Check
+✅ Kerberoastable Accounts
+✅ Group Enumeration
+✅ Network Share Enumeration
+✅ Delegation Check
+✅ ACL Check
+
+🔹 2️⃣ BloodHound Integration
+✅ SharpHound Auto Detection
+✅ Collection Mode
+✅ Export Zip
+
+🔹 3️⃣ AD Recycle Bin Inspector (Read-Only)
+✅ Get-DeletedADObjectReport
+
+🔹 4️⃣ Token & Privilege Analyzer (Full Host Context Module)
+✅ whoami /priv
+✅ whoami /all
+✅ whoami /groups
+✅ whoami /user
+✅ Integrity Detection
+Low / Medium / High / System
+
+✅ Elevated Detection
+✅ UAC Posture
+✅ LSA Posture
+✅ Export
+
+🔹 5️⃣ Reporting
+✅ Summary Report Generator
+
+🔹 6️⃣ Modes
+Lab Mode
+
+เปิด optional tools
+BloodHound full collection
+Open Facebook (minimized 😄)
+Audit Mode (default)
+Conservative collection
+Lower noise
+DCOnly collection
+
+🔹 7️⃣ OPSEC Improvements
 
 ---
 
